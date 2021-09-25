@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 3 First React component
+Section 4 JSX
