@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 6 Conditional rendering
+Section 7 Management of variable in the component via useState
