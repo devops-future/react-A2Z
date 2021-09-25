@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 9 Managing multiple input states
+Section 10 Selecting a specific DOM with useRef
