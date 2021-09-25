@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 8 Management of input state
+Section 9 Managing multiple input states
