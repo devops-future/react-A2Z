@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 10 Selecting a specific DOM with useRef
+Section 11 Rendering an Array
