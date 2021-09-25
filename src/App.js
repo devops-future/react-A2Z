@@ -19,7 +19,7 @@ function App() {
       <Hello
         // test open tag
       />
-      <Hello/>
+      <Hello isSpecial/>
       <Hello name="react" color="red" />
       <div style={style}>Good Bye {name}!</div>
       <div className="gray-box"></div>
