@@ -1,5 +1,6 @@
 import react from 'react';
 import Hello from './Hello';
+import Wrapper from './Wrapper';
 import './App.css'
 
 function App() {
@@ -12,17 +13,17 @@ function App() {
   }
 
   return (
-    <>
+    <Wrapper>
       {/* descr test1 */}
       /* descr test2 */
       <Hello
         // test open tag
       />
       <Hello/>
-      <Hello/>
+      <Hello name="react" color="red" />
       <div style={style}>Good Bye {name}!</div>
       <div className="gray-box"></div>
-    </>
+    </Wrapper>
   );
 }
 

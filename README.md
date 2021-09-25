@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 4 JSX
+Section 5 Pass value to the component via props
