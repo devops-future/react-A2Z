@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 12,13 Creating a variable inside a component with useRef
+Section 14 Removing an item from array
