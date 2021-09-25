@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function User({user, onRemove, onToggle}) {
+	useEffect(() => {
+		console.log('Show component');
+		console.log(user);
+		return () => {
+			console.log('Hide component');
+			console.log(user);
+		};
+	}, [user]);
 	return (
 		<div>
 			<b
@@ -12,6 +20,7 @@ function User({user, onRemove, onToggle}) {
 			>
 				{user.username}
 			</b>
+			&nbsp;
 			<span>({user.email})</span>
 			<button onClick={() => onRemove(user.id)}>Remove</button>
 		</div>
