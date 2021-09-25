@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 16 Using useEffect to set what to do on mount/unmount/update
+Section 17 Reusing valudes computed using useMemo
