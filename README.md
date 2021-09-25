@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 11 Rendering an Array
+Section 12,13 Creating a variable inside a component with useRef
