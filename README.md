@@ -2,6 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 18 Reusing functions using useCallback
-
-Section 19 Avoid component re-rendering using React.memo
+Section 20 Separating state update logic using useReducer
