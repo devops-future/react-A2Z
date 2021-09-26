@@ -2,4 +2,6 @@
 
 Chapter 1 Introduction
 
-Section 17 Reusing values computed using useMemo
+Section 18 Reusing functions using useCallback
+
+Section 19 Avoid component re-rendering using React.memo
