@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 17 Reusing valudes computed using useMemo
+Section 17 Reusing values computed using useMemo
