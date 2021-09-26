@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 21 Creating a custom hooks
+Section 22 Global value management using the Contect API

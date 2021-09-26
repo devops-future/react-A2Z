@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
+import { UserDispatch } from './App';
 
-function User({user, onRemove, onToggle}) {
-	useEffect(() => {
-		console.log('Show component');
-		console.log(user);
-		return () => {
-			console.log('Hide component');
-			console.log(user);
-		};
-	}, [user]);
+const User = React.memo(function User({ user }) {
+	const dispatch = useContext(UserDispatch);
+
 	return (
 		<div>
 			<b
@@ -16,27 +11,30 @@ function User({user, onRemove, onToggle}) {
 					cursor: 'pointer',
 					color: user.active ? 'green' : 'black'
 				}}
-				onClick={() => onToggle(user.id)}
+				onClick={() => {
+					dispatch({ type: 'TOGGLE_USER', id: user.id });
+				}}
 			>
 				{user.username}
 			</b>
 			&nbsp;
 			<span>({user.email})</span>
-			<button onClick={() => onRemove(user.id)}>Remove</button>
+			<button
+				onClick={() => {
+					dispatch({ type: 'REMOVE_USER', id: user.id });
+				}}
+			>
+				Remove
+			</button>
 		</div>
 	);
-}
+});
 
-function UserList({users, onRemove, onToggle}) {
+function UserList({ users }) {
 	return (
 		<div>
-			{users.map((user, index) => (
-				<User
-					user={user}
-					key={index}
-					onRemove={onRemove}
-					onToggle={onToggle}
-				/>
+			{users.map(user => (
+				<User user={user} key={user.id} />
 			))}
 		</div>
 	);

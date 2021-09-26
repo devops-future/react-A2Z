@@ -10,10 +10,6 @@ function countActiveUsers(users) {
 }
 
 const initialState = {
-  inputs: {
-    username: '',
-    email: ''
-  },
   users: [
     {
       id: 1,
@@ -44,12 +40,14 @@ function reducer(state, action) {
       };
     case 'TOGGLE_USER':
       return {
+        ...state,
         users: state.users.map(user =>
           user.id === action.id ? { ...user, active: !user.active } : user
         )
       };
     case 'REMOVE_USER':
       return {
+        ...state,
         users: state.users.filter(user => user.id !== action.id)
       };
     default:
@@ -57,8 +55,10 @@ function reducer(state, action) {
   }
 }
 
+export const UserDispatch = React.createContext(null);
+
 function App() {
-  const [{ username, email }, onChange, reset] = useInputs({
+  const [{ username, email }, onChange, onReset] = useInputs({
     username: '',
     email: ''
   });
@@ -76,9 +76,9 @@ function App() {
         email
       }
     });
-    reset();
+    onReset();
     nextId.current += 1;
-  }, [username, email, reset]);
+  }, [username, email, onReset]);
 
   const onToggle = useCallback(id => {
     dispatch({
@@ -96,7 +96,7 @@ function App() {
 
   const count = useMemo(() => countActiveUsers(users), [users]);
   return (
-    <>
+    <UserDispatch.Provider value={dispatch}>
       <CreateUser
         username={username}
         email={email}
@@ -105,7 +105,7 @@ function App() {
       />
       <UserList users={users} onToggle={onToggle} onRemove={onRemove} />
       <div>Active user count: {count}</div>
-    </>
+    </UserDispatch.Provider>
   );
 }
 
