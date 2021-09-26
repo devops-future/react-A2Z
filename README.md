@@ -2,4 +2,4 @@
 
 Chapter 1 Introduction
 
-Section 22 Global value management using the Contect API
+Section 23 Easier immutability management with Immer
